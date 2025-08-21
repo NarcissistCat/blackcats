@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACKCATS DARKWEB</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Efecto de lluvia de código Matrix */
+        #matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        
+        /* Encabezado y navegación */
+        header {
+            padding: 1rem;
+            border-bottom: 1px solid #00ff00;
+            position: relative;
+        }
+        
+        .logo {
+            text-align: center;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: #00ff00;
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #00ff00;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Contenido principal */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            background-color: rgba(0, 15, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Estilos para imágenes de pistas */
+        .pista-img {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #00ff00;
+            margin: 1rem 0;
+            display: block;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+        }
+        
+        /* Efectos de terminal y consola */
+        .console {
+            background-color: #001100;
+            border: 1px solid #00ff00;
+            padding: 1rem;
+            height: auto;
+            overflow-y: auto;
+            margin-bottom: 1rem;
+        }
+        
+        .console-line {
+            animation: typing 2s steps(40, end);
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 0.5rem;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        /* Efecto de parpadeo para texto */
+        .blink {
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Efecto de lluvia de código Matrix -->
+    <canvas id="matrix-bg"></canvas>
+    
+    <header>
+        <div class="logo">BLACK <span class="blink">CATS</span></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#evento">BLACKCATS?!</a></li>
+                <li><a href="#pistas">Pistas???</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="inicio">
+            <h2>Godspeed, Brother</h2>
+            <div class="console">
+                <p class="console-line">> Sistema conectado...</p>
+                <p class="console-line">> DarkWeb Loading...</p>
+                <p class="console-line">> Bem-vindo à rede secreta dos BLACKCATS.</p>
+                <p class="console-line">> Prepare suas habilidades. Vai precisar.</p>
+            </div>
+            <p>Tudo o que é aqui publicado é feito de forma anónima e através de VPN. Não se sabe quem está por trás de tudo isto.</p>
+        </section>
+
+        <section id="pistas">
+            <h2>Pistas e Códigos</h2>
+            <p>Aqui estão algumas pistas iniciais para você se preparar para o evento. Estude-as cuidadosamente.</p>
+            
+            <h3>Pista #1</h3>
+            <div class="console">
+                <p>> Dizem que um carregamento com peças diretamente trazidas do Japão está chegando ao porto de Los Santos hoje.</p>
+                <p>> Não foi dada muita informação sobre isso, dizem que traz de tudo...</p>
+                <p>> Esta informação foi dada por um informante e está publicada nesta página da darkweb.</p>
+                <p>> Você conseguirá obter algo? As forças da ordem poderão te conter antes que você possa conseguir algo?</p>
+                <p>> Não sei, mas espero que você tenha o necessário para conseguir algumas boas peças para seu carro, não?</p>
+            </div>
+            
+            <center><img src="https://i.imgur.com/VLkYz4g.png" alt="Pista 1 - Carregamento Japonês" class="pista-img"></center>
+            
+            <h3>Pista #2</h3>
+            <div class="console">
+                <p>> Ei, não pense que a única carga estava no porto, idiota. A gente tem mais informações e vai continuar soltando informação conforme a operação for avançando... Nós temos a info, vocês veem se querem obter as coisas ou não. Bom, melhor já não falar nada. Dizem que tem outra carga de peças que vinha num avião; foi parar em algum lugar da floresta... Fica na sua mão descobrir onde porra que isso está. A gente não pode te dar tudo, hein?.</p>
+            </div>
+				<center><img src="https://i.imgur.com/UPryd9w.png" alt="Pista 2 - AVIAOOOO" class="pista-img"></center>
+			
+			   <h3>Pista #3</h3>
+            <div class="console">
+                <p>> Continuamos... continuamos e continuamos... à procura de coisas... a encontrar, a revelar... ai ai... o meu informador disse-me sobre outro lote de kits... e peças e todas essas coisinhas que todos nós gostamos para os nossos carros... não é?...
+
+				Enfim, não vou alongar mais isto. Desta vez, a única coisa que este tipo me disse foi... "Sabes DIRIGIR um barco?" Não sei o que é que ele quis dizer com isso, por isso suponho que SERÁ O MAR. Pessoalmente, não quero ir para o mar... mas dependerá de se vocês querem ir ou não..</p>
+            </div>
+				<center><img src="https://i.imgur.com/FzIejlM.png" alt="Pista 3 - AVIAOOOO" class="pista-img"></center>
+				
+			<h3>Pista #4 como eu coloquei vc</h3>
+            <div class="console">
+                <p>> Este último é o mais complicado... meu Deus, até vir aqui é insuportável, só consigo cheirar merda de pássaro e peixe... É no meio do nada, esta porcaria de lugar. Por San Chiaski? Onde raio fica isso sequer... Que vontade de vomitar aqui está. Há um sujeito estranho que não para de me olhar, acho que me quer fazer algo, que nojo.
+
+Enfim, este é o carregamento maior... kits de drift... lockpicks... o sonho húmido de qualquer amante da velocidade. Quem sabe, capaz tem há mais uma coisa, da minha parte, suponho. Por isso, este será o mais difícil de encontrar, imagino... Muita sorte, irmãos.</p>
+            </div>
+				<center><img src="https://i.imgur.com/LcseLeJ.png" alt="Pista 4 MERDA DE PASSARO PORRA" class="pista-img"></center>
+            
+            <center><p>Be calm, be silent, be BLACKCAT.</p></center>
+        </section>
+        
+        <section id="sobre">
+            <h2>ABOUT US????</h2>
+            <p>JUST FAST, JUST BLACKCATS.</p>
+        </section>
+    </main>
+    
+  <center>  <footer>
+        <p>BLACKCATS RACING DEVELOPMENT | Todos os dados estão criptografados</p>
+        <p>((Este site é apenas para fins de entretenimento pro GTAWorld PT/BR. Nenhuma informação pessoal real é coletada.))</p>
+    </footer>
+	
+	</center>
+
+    <script>
+        // Efecto de lluvia de código Matrix
+        const canvas = document.getElementById('matrix-bg');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$#@%&!?*';
+        const fontSize = 12;
+        const columns = canvas.width / fontSize;
+        
+        const drops = [];
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+        
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 10, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#00ff00';
+            ctx.font = `${fontSize}px monospace`;
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                drops[i]++;
+            }
+        }
+        
+        setInterval(drawMatrix, 50);
+        
+        // Efecto de escritura en consola
+        const consoleLines = document.querySelectorAll('.console-line');
+        consoleLines.forEach((line, index) => {
+            line.style.animationDelay = `${index * 1.5}s`;
+        });
+        
+        // Ajustar el canvas cuando cambia el tamaño de la ventana
+        window.addEventListener('resize', function() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
